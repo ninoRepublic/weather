@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="author" contect="libing, abingdesign@gmail.com" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-icon-precomposed" href="img/iphone_logo.png" />
+		<link rel="apple-touch-startup-image" href="img/startup.png">
+		<link rel="stylesheet" href="css/libing.css" />
+		<link rel="stylesheet" href="css/animations.css" />
+		<title>Weather</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+
+	<body onload="loadInfo()">
+		<div class="loading pt-page-scaleUp2">loading</div>
+        <div class="citylist hide">
+          <div class="citylistWidth">
+        	<div class="citylistName left">南京</div>
+        	<div class="citylistName left">北京</div>
+        	<div class="citylistName left">上海</div>
+        	<div class="citylistName left">广州</div>
+        	<div class="citylistName left">深圳</div>
+        	<div class="citylistName left">武汉</div>
+        	<div class="citylistName left">天津</div>
+        	<div class="citylistName left">孝感</div>
+          	<div class="clear"></div>
+          	<input class="inputTxt" placeholder="城市名称" /><br />
+          	<span id="cancel" class="inputBtn">取&nbsp;&nbsp;消</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          	<span id="accept" class="inputBtn">添&nbsp;&nbsp;加</span>
+          </div>
+        </div>
+		<div id="city"></div>
+		<div id="txtD"></div>
+		<div id="top">
+			<div id="tmp">
+				<span class="tmpL"></span><span id="tmpNow">N/A</span><span class="tmpH"></span>
+			</div>
+			<div class="aqi">
+				<span id="aqi"></span>
+				<span id="km"></span>
+				<span id="pm25"></span>
+				<span id="pm10"></span>
+				<span id="rain"></span>
+				<span id="Humidity"></span>
+				<span id="wind"></span>
+			</div>
+			<div id="hourlist1" class="hide"></div>
+		</div>
+
+		<div class="middle">
+			<div id="updateTime"></div>
+			<div id="nino">To nino</div>
+			<div id="icon" class="hide pt-page-scaleUpCenter2"><img src=""></div>
+			<div class="bgimg hide pt-page-lb"></div>
+			<!--<div class="hourlist1"></div>
+		<div class="hourlist2">
+		    <div id="hourlist1"></div>
+		</div>-->
+		</div>
+
+		<div class="foot">
+			<div class="list">
+				<div class="listTxt hide">显示空间不足<br>请调整屏幕方向</div>
+				<div class="div90">
+					<!--<div class="div15 left">Today</div>
+            <div class="div15 left"><img src="http://files.heweather.com/cond_icon/100.png" ></div>
+            <div class="div10 left Tright">15</div>
+            <div class="div10 left Tleft">20</div>
+            <div class="div15 left">4km</div>
+            <div class="div15 left">70%</div>
+            <div class="div20 left">Wind 1-2 </div>-->
+
+				</div>
+			</div>
+		</div>
+		<div class="foot2"></div>
+
+		<script type="text/javascript" src="js/libing.js"></script>
+	</body>
+</html>
