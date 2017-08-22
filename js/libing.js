@@ -61,10 +61,10 @@ function loadInfo() {
 	    city = "南京";
 	    localStorage.city = "南京";
     }
-	var url = "https://api.heweather.com/x3/weather?city=" + city + "&key=ae2ffc6eaa01421097314a07bc50d115";
+	var url = "https://free-api.heweather.com/v5/weather?city=" + city + "&key=ae2ffc6eaa01421097314a07bc50d115";
 	$.getJSON(url, function(data) {
 		$(".loading").addClass("hide");
-		var libing = data["HeWeather data service 3.0"][0];
+		var libing = data["HeWeather5"][0];
 		if(libing["status"] == "unknown city"){
 			alert("亲，你是文盲吧！中国有这个城市吗？")
 			addcity("南京");
